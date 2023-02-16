@@ -31,7 +31,7 @@ main article {
 }
 
 main article.hit {
-    animation: spin .9s ease;
+    animation: spin .9s ease forwards;
     background-image: url('../assets/img/mole.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,10 +50,12 @@ main article.mole {
     background-position: center bottom;
 }
 
-.debug{
+.debugMode{
     position: fixed;
     top: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.2);
-    min-width: 300px; 
+    padding: 1rem;
+    margin: 1rem;
+    color: blue;
 }
