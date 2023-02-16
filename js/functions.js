@@ -5,4 +5,28 @@ function random(min, max){
 }
 
 
-export {random} ;
+//return promise of user info
+function gameSettings(){
+    let name = prompt('Please write your name:');
+    let count = parseInt(prompt('Count down timer in Seconds?', 60));
+    let holes = parseInt(prompt('Number of holes ', 12));
+    let user = {
+        name: !!name ? name : 'Beautiful' ,
+        count: !!count && count < 200 ? count : 60 ,
+        holesNum: !!holes && holes < 24 ? holes : 24 
+    };
+   //popUp game settings and user name 
+    let promise = new Promise((res)=> {
+            res(user);
+    }); 
+
+    return promise;
+}
+
+function saveState(user){
+    localStorage.setItem('user',JSON.stringify(user)); 
+}
+
+
+
+export {random,gameSettings,saveState} ;

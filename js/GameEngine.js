@@ -54,7 +54,7 @@ class Game {
     }
 
     randomHoleID(){
-        return random(this.numOfHoles - 1, 0 );
+        return random(0,this.numOfHoles - 1 );
     }
 
     levels(){
@@ -76,7 +76,7 @@ class Game {
                 this.gameSpeed = 15;
                 break;
             case 6:
-                this.gameSpeed = 50;
+                this.gameSpeed = 10;
                 break;
 
         }
@@ -118,7 +118,6 @@ class Game {
                 <li><b>game over:</b> ${this.gameOver} </li> 
                 <li><b>gameSpeed:</b> ${this.gameSpeed} </li> 
                 <li><b>Number of holes:</b> ${this.numOfHoles} </li> 
-                <li><b>Timer:</b> ${this.timer} </li> 
             </ul>
         
         ` ;
