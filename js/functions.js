@@ -15,12 +15,7 @@ function gameSettings(){
         count: !!count && count < 200 ? count : 60 ,
         holesNum: !!holes && holes < 24 ? holes : 24 
     };
-   //popUp game settings and user name 
-    let promise = new Promise((res)=> {
-            res(user);
-    }); 
-
-    return promise;
+    return user;
 }
 
 function saveState(user){

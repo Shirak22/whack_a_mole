@@ -17,14 +17,14 @@ let myInterval;
 
 
 // gameSetup triggers one time to initialize the game
-async function gameSetup() {
+ function gameSetup() {
 
-        userData = await gameSettings();  // returns user object
+        userData =  gameSettings();  // returns user object
         newGame = new Game(userData.holesNum);
         userName.innerHTML = 'Hello ' + userData.name + '!';
         timeLeft = new Timer();
         timer = new Timer();
-        await newGame.createHoles(); //everything waiting the holes to be created 
+        newGame.createHoles(); //everything waiting the holes to be created 
         myInterval = setInterval(gameLoop, 30);  //THE LOOP FUNCTION / frames update
     
     

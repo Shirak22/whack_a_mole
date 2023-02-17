@@ -35,15 +35,12 @@ class Game {
     }
 
     createHoles(){
-        let promise = new Promise(res=>{
                 for (let i = 0; i < this.numOfHoles; i++) {
                     let newHole = new Hole(i,this.mainContainer);
                     newHole.render();
                  }
-                 res(); 
-        });
-
-        return promise; 
+           
+  
     }
     checkClick(){
     
